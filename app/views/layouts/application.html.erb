@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CatsClient</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+
+    <% flash.each do |name, message| %>
+      <p><%= message %></p>
+    <% end %>
+
+    <a href="/client/cats/new">Create A New Cat</a>
+
+
+    <%= yield %>
+  </body>
+</html>

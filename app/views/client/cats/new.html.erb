@@ -1,0 +1,23 @@
+<h2>Create a new cat!</h2>
+
+<%= form_tag "/client/cats", method: :post do %>
+
+<div>
+  Name: <input type="text" name="name"/>
+</div>
+
+<div>
+  Breed: <input type="text" name="breed"/>
+</div>
+
+<div>
+  Age: <input type="text" name="age"/>
+</div>
+
+<div>
+  Registry: <input type="text" name="registry"/>
+</div>
+
+
+<input type="submit" name="" value="Create A Cat"/>
+<% end %>

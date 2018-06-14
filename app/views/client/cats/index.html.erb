@@ -1,0 +1,12 @@
+
+<h2>These are my cats!</h2>
+
+<% @cats.each do |cat| %>
+<h1>Name: <a href="/client/cats/<%= cat['id'] %>"><%= cat["name"] %></a></h1>
+<h2><%= cat["breed"] %></h2>
+<h3><%= cat["age"] %></h3>
+<h3><%= cat["registry"] %></h3>
+<img src="<%= cat["image"] %>"><br>
+
+<br>
+<%end%>

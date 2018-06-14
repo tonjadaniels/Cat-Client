@@ -1,0 +1,10 @@
+<h2>Meet</h2>
+
+<h1>Name: <%= @cat["name"] %></h1>
+<h2>Breed: <%= @cat["breed"] %></h2>
+<h3>Age: <%= @cat["age"] %></h3>
+<h3>Registry: <%= @cat["registry"] %></h3>
+<img src="<%= @cat["image"] %>"><br>
+
+<a href="/client/cats/<%= @cat['id'] %>/edit">Edit</a>
+<a href="/client/cats/<%= @cat['id'] %>" data-method="delete">Delete</a>

@@ -1,0 +1,20 @@
+<h2>Edit Cat:</h2>
+
+<%= form_tag "/client/cats/#{@cat['id']}", method: :patch do %>
+  <div>
+    Name: <input type="text" name="name" value="<%= @cat["name"] %>" />
+  </div>
+  <div>
+    Breed: <input type="text" name="breed" value="<%= @cat["breed"] %>" />
+  </div>
+  <div>
+    Age: <input type="text" name="age" value="<%= @cat["age"] %>" />
+  </div>
+  <div>
+    Registry: <input type="text" name="registry"value="<%= @cat["registry"] %>" />
+  </div>
+  <div>
+    Image URL: <input type="text" name="image" value="<%= @cat["image"] %>"/>
+  </div>
+  <input type="submit" value="Update Cat"/>
+  <% end %>

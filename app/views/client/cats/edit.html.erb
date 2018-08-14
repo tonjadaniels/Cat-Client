@@ -1,3 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+
+  <style>
+    body {background-image: url("http://www.publicdomainpictures.net/pictures/120000/velka/white-texture-background.jpg");}
+    h2 {color: midnightblue;}
+  </style>
+
+</head>
+<body>
+  
 <h2>Edit Cat:</h2>
 
 <%= form_tag "/client/cats/#{@cat['id']}", method: :patch do %>
@@ -18,3 +32,6 @@
   </div>
   <input type="submit" value="Update Cat"/>
   <% end %>
+
+</body>
+</html>

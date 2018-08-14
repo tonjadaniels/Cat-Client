@@ -17,6 +17,8 @@ Rails.application.routes.draw do
 
     delete "/cats/:id" => "cats#destroy"
 
+    get "/welcome" => "welcome#code"
+
   end
 
 end

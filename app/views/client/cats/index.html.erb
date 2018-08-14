@@ -1,12 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>All The Cats</title>
 
-<h2>These are my cats!</h2>
+
+
+</head>
+<body>
+  
+<h1>These Are My Cats!</h1>
 
 <% @cats.each do |cat| %>
-<h1>Name: <a href="/client/cats/<%= cat['id'] %>"><%= cat["name"] %></a></h1>
-<h2><%= cat["breed"] %></h2>
-<h3><%= cat["age"] %></h3>
-<h3><%= cat["registry"] %></h3>
-<img src="<%= cat["image"] %>"><br>
+<!-- <h2>NAME: <a href="/client/cats/<%= cat['id'] %>"><%= cat["name"] %></a></h2>
+<h3>BREED: <%= cat["breed"] %></h3>
+<h3>AGE: <%= cat["age"] %></h3>
+<h3>REGISTRY: <i><%= cat["registry"] %></i></h3>
+<img src="<%= cat["image"] %>" width=30%><br> -->
 
-<br>
+<div class="row">
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="<%= cat["image"] %>"  alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Meet: <%= cat["name"] %></h5>
+      <p class="card-text">Breed: <%= cat["breed"] %></p>
+      <p class="card-text">Age: <%= cat["age"] %></p>
+      <p class="card-text">Registry: <i><%= cat["registry"] %></i></p>
+      <a href="/client/cats/<%= cat['id'] %>" class="btn btn-primary">Edit <%= cat["name"]%></a>
+    </div>
+  </div>
+</div>
+
 <%end%>
+
+</body>
+</html>

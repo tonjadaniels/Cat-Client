@@ -1,10 +1,27 @@
-<h2>Meet</h2>
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <title>Document</title>
 
-<h1>Name: <%= @cat["name"] %></h1>
-<h2>Breed: <%= @cat["breed"] %></h2>
-<h3>Age: <%= @cat["age"] %></h3>
-<h3>Registry: <%= @cat["registry"] %></h3>
-<img src="<%= @cat["image"] %>"><br>
+<style>
+  body {background-image: url("http://www.publicdomainpictures.net/pictures/120000/velka/white-texture-background.jpg");}
+  h2 {color: midnightblue;}
+</style>
 
-<a href="/client/cats/<%= @cat['id'] %>/edit">Edit</a>
-<a href="/client/cats/<%= @cat['id'] %>" data-method="delete">Delete</a>
+ </head>
+ <body>
+   
+<h2 style="font-family:Trebuchet MS;">Meet</h2>
+
+<h2 style="font-family:Trebuchet MS;">NAME: <%= @cat["name"] %></h2>
+<h3 style="font-family:Trebuchet MS;">BREED: <%= @cat["breed"] %></h3>
+<h3 style="font-family:Trebuchet MS;">AGE: <%= @cat["age"] %></h3>
+<h3 style="font-family:Trebuchet MS;">REGISTRY: <i><%= @cat["registry"] %></i></h3>
+<img src="<%= @cat["image"] %>" width=30% ><br>
+
+<a href="/client/cats/<%= @cat['id'] %>/edit"><button>Edit</button></a>
+<a href="/client/cats/<%= @cat['id'] %>" data-method="delete"><button>Delete</button></a>
+
+ </body>
+ </html> 
